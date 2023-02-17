@@ -19,11 +19,13 @@ class KNN:
 
     def euclidean(self, X_test):
         '''Euclidean distance function'''
-        return lambda train_set: ((train_set['x_1'] - X_test['x_1'])**2 + (train_set['x_2'] - X_test['x_2'])**2)**0.5
+        test_cols = X_test.columns
+        return lambda train_set: (sum([(train_set[col] - X_test[col])**2 for col in test_cols]))**0.5
 
     def manhattan(self, X_test):
         '''Manhattan distance function'''
-        return lambda train_set: abs(train_set - X_test)
+        test_cols = X_test.columns
+        return lambda train_set: sum([abs(train_set[col] - X_test[col]) for col in test_cols])
 
     def standardizer(self, train_set, X_test):
         '''Standardize data
@@ -33,7 +35,7 @@ class KNN:
         import numpy as np
         # cara menghitung:
         # (data - rata2)/stdev
-        input_data = train_set[['x_1', 'x_2']]
+        input_data = train_set
         mean = np.mean(input_data, axis=0)
         stdev = np.std(input_data, axis=0)
 
@@ -98,3 +100,5 @@ class KNN:
         _, ni = self.neighbor_index(
             self.train_set, self.X_test, self.y_train, self.k)
         return mv, ni
+
+    
