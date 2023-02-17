@@ -1,4 +1,4 @@
-# K-Nearest Neighbors
+# K-Nearest Neighbors (KNN)
 Algoritma KNN merupakan salah satu algoritma supervised learning yang memproses data berdasarkan jarak (distance based).
 Dalam pengukuran jarak antar titik data, KNN dapat menggunakan perhitungan jarak Euclidean, Manhattan dll.
 ## Cara Kerja KNN
