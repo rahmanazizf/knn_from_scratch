@@ -90,7 +90,7 @@ class KNN:
 
     def calculate_knn(self):
         '''
-        Calculate majority vote and neighbor index
+        Calculate majority vote and neighbor index for only one row
         *Return*:
         mv: majority vote <int>
         ni: indexes <list>
@@ -101,4 +101,12 @@ class KNN:
             self.train_set, self.X_test, self.y_train, self.k)
         return mv, ni
 
-    
+    def transform(self):
+        '''Calculate more than one row data test'''
+        mvs = []
+        nis = []
+        for i in range(len(self.X_test)):
+            x = self.X_test.loc[[i],:].reset_index(drop=True)
+            mvs.append(self.majority_vote(self.train_set, x, self.y_train, self.k))
+            nis.append(self.neighbor_index(self.train_set, x, self.y_train, self.k)[1])
+        return mvs, nis
