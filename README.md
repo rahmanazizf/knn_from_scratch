@@ -62,7 +62,7 @@ serupa dengan `calculate_knn` tetapi dapat digunakan untuk lebih dari 1 titik da
 
 ## Cara Menggunakan Modul
 
-Jika library numpy belum tersedia dalam direktori kerja, lakukan instalasi library numpy terlebih dahulu dengan perintah berikut.
+Jika library numpy belum tersedia dalam local/global environment direktori kerja, lakukan instalasi library numpy terlebih dahulu dengan perintah berikut.
 
 ```
 python -m pip install numpy
