@@ -14,7 +14,7 @@ Dalam proyek ini, modul KNN dalam file `knn.py` dikonstruksi dalam pemrograman b
 
 berisi instance attribute dari class KNN
 
-1. `euclidean`
+2. `euclidean`
 
 fungsi untuk menghitung jarak antartitik dengan fungsi Euclidean
 
@@ -22,7 +22,7 @@ $$
 d(p, q)=\sqrt{(p_1-q_1)^2+(p_2-q_2)^2+...+(p_n-q_n)^2}
 $$
 
-1. `manhattan`
+3. `manhattan`
 
 fungsi untuk menghitung jarak antartitik dengan fungsi Manhattan
 
@@ -30,7 +30,7 @@ $$
 d(p,q)=|p_1-q_1|+|p_2-q_2|+...+|p_n+q_n|
 $$
 
-1. `standardizer`
+4. `standardizer`
 
 fungsi untuk menormalisasi nilai setiap fitur dalam dataset
 
@@ -40,12 +40,12 @@ $$
 
 di mana $x$ adalah titik data dalam dataset, $\mu$ rata-rata, dan $\sigma$ standar deviasi
 
-1. `calculate_distance`
+5. `calculate_distance`
 
 menghitung jarak menggunakan `euclidean` atau `manhattan` bergantung pada input dari pengguna
 
-1. `majority_vote`
+6. `majority_vote`
 
 menentukan indeks dari titik data terdekat sebanyak k kemudian mengembalikan nilai kelas terbanyak di antara titik-titik data tersebut.
 
-1.
+7.
